@@ -1,29 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Painel Técnico - System Help</title>
-  <link rel="stylesheet" href="painel-style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Suporte Técnico System Help</title>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header class="painel-header">
-    <div class="header-left">
-      <img src="assets/logo-system-help.png" class="header-logo" alt="System Help">
-      <h1>System Help - Painel Técnico</h1>
-    </div>
-    <div class="header-right">
-      <button id="logoutBtn" onclick="logout()">Sair ⎋</button>
-    </div>
-  </header>
-  <main>
-    <div class="painel-buttons">
-      <button onclick="loadTickets('abertos')" id="btnAbertos" class="active">Abertos</button>
-      <button onclick="loadTickets('resolvidos')" id="btnResolvidos">Resolvidos</button>
-    </div>
-    <div id="ticketsContainer" class="tickets-container"></div>
-  </main>
-  <script src="painel-auth.js"></script>
+<header class="main-header">
+  <div class="container">
+    <h1>Suporte Técnico System Help</h1>
+    <p>Atendimento via WhatsApp — Central de solicitações</p>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Solicitar Suporte</h2>
+    <form id="support-form">
+      <label>Nome</label>
+      <input id="nome" required />
+      <label>Telefone (WhatsApp)</label>
+      <input id="telefone" placeholder="(00) 00000-0000" required />
+      <label>Descrição do problema</label>
+      <textarea id="problema" rows="5" required></textarea>
+      <button type="submit">Enviar Solicitação</button>
+    </form>
+    <div id="msg" style="margin-top:12px;color:green;display:none">Solicitação enviada!</div>
+  </section>
+
+  <section class="card">
+    <h2>Sobre a System Help</h2>
+    <p>Serviços: Acesso remoto, manutenção de software, suporte a hardware, rede e segurança.</p>
+    <p>Atendimento rápido pelo WhatsApp: <a href="https://wa.me/553131913858" target="_blank">+55 31 3191-3858</a></p>
+  </section>
+</main>
+
+<footer class="container footer">
+  <small>© System Help</small>
+</footer>
+
+<script src="/script.js"></script>
 </body>
 </html>
